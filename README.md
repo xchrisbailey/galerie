@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Public Tezos NFT gallery
+> A Public space for your Tezos NFTs
 
 ## Install
 
@@ -24,13 +24,11 @@ yarn run start
 
 👤 **Chris Bailey**
 
-* Website: chrisbailey.dev
-* Twitter: [@chrisbailey](https://twitter.com/chrisbailey)
-* Github: [@xchrisbailey](https://github.com/xchrisbailey)
+- Website: chrisbailey.dev
+- Twitter: [@chrisbailey](https://twitter.com/chrisbailey)
+- Github: [@xchrisbailey](https://github.com/xchrisbailey)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
