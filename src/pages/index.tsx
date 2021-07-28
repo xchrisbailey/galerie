@@ -9,16 +9,16 @@ export default function Home(props: Props) {
   return (
     <>
       <header className="p-4 mb-8 bg-indigo-300">
-        <h1 className="ml-2 font-serif text-2xl font-bold tracking-widest">
-          GALERIE
-        </h1>
+        <h1 className="ml-2 text-2xl font-bold tracking-widest">GALERIE</h1>
       </header>
       <main className="w-full mx-2 mb-10 md:container md:mx-auto">
         <section>
-          <h2 className="mb-3 text-2xl font-bold tracking-wider text-indigo-600">
-            HEN Gallery
-          </h2>
-          <section className="grid grid-flow-row-dense grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-3 xl:grid-cols-4">
+          <header className="w-full p-2 bg-pink-200 rounded shadow mb-3 flex items-center">
+            <h2 className="ml-2 text-4xl font-bold tracking-wider text-black uppercase">
+              HEN Gallery
+            </h2>
+          </header>
+          <section className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-3 xl:grid-cols-4">
             {props.result.map((objkt) => (
               <ObjktCard objkt={objkt} key={objkt.token.id} />
             ))}

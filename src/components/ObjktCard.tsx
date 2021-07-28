@@ -1,8 +1,8 @@
-import React from 'react';
 import { Objkt } from '../pages';
 import { getImageUrl } from '../utils/getImageUrl';
 import { v4 as uuidv4 } from 'uuid';
 import { TagLabel } from './TagLabel';
+import Image from 'next/image';
 
 type Props = {
   objkt: Objkt;
@@ -10,10 +10,9 @@ type Props = {
 
 export const ObjktCard = (props: Props) => {
   const { objkt } = props;
-  console.log(objkt.token.token_tags);
 
   return (
-    <article className="flex flex-col w-full p-1 bg-gray-100 rounded">
+    <article className="flex flex-col items-start w-full min-h-0 p-1 bg-white rounded shadow">
       <section>
         <h3 className="py-3 ml-1 text-sm text-indigo-600 uppercase">
           <a href={`https://www.hicetnunc.xyz/objkt/${objkt.token.id}`}>
@@ -21,14 +20,15 @@ export const ObjktCard = (props: Props) => {
           </a>
         </h3>
       </section>
-      <section className="px-1">
-        <img
+      <section className="px-1 w-full">
+        <Image
+          layout="responsive"
+          width="100%"
+          height="100%"
           src={getImageUrl(objkt.token.display_uri)}
-          className="rounded shadow"
+          alt={objkt.token.title ? objkt.token.title : 'unknown'}
+          className="rounded"
         />
-      </section>
-      <section className="flex-grow">
-        <p className="p-1 text-sm">{objkt.token.description}</p>
       </section>
       <section className="flex flex-wrap mt-2">
         {objkt.token.token_tags.map((tag) => (
