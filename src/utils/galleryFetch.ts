@@ -6,11 +6,10 @@ export const galleryQuery: string = `
         artifact_uri
         display_uri
         thumbnail_uri
-        timestamp
         mime
         title
         description
-        
+
         token_tags {
           tag {
             tag
@@ -31,9 +30,9 @@ export const galleryQuery: string = `
 `;
 
 export async function fetchGraphQL(
-  operationsDoc: String,
-  operationName: String,
-  variables: { address: String }
+  operationsDoc: string,
+  operationName: string,
+  variables: { address: string | null }
 ) {
   const result = await fetch('https://api.hicdex.com/v1/graphql', {
     method: 'POST',
