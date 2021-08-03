@@ -65,7 +65,7 @@ type Amount = {
   price: number;
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { errors, data } = await fetchGraphQL(galleryQuery, 'gallery', {
     address: config.address
   });
